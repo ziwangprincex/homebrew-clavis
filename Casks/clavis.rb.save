@@ -1,0 +1,5 @@
+cask "clavis" do
+  version "1.0.0" sha256 "22c858c98b121c14f6dcc99d1a2272261a3660cfebe2c953dfba2dd536a21ce6" url 
+  "https://github.com/ziwangprincex/Clavis/releases/download/v#{version}/Clavis_1.0.0_aarch64.dmg" name "Clavis" desc "AI-powered Git 
+  commit message generator" homepage "https://github.com/ziwangprincex/Clavis" app "Clavis.app"
+end
