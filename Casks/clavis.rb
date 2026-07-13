@@ -1,13 +1,23 @@
 cask "clavis" do
-  version "1.0.0"
+  version "1.0.1"
+  sha256 "ca9fc3726c3f9b55993288165def4909c797df2b9db1e9782da85bc3076e0e1b"
 
-  sha256 "22c858c98b121c14f6dcc99d1a2272261a3660cfebe2c953dfba2dd536a21ce6"
-
-  url "https://github.com/ziwangprincex/Clavis/releases/download/v#{version}/Clavis_1.0.0_aarch64.dmg"
-
+  url "https://github.com/ziwangprincex/Clavis/releases/download/v#{version}/Clavis_#{version}_aarch64.dmg"
   name "Clavis"
-  desc "AI-powered Git commit message generator"
+  desc "Markdown / LaTeX / Typst editor with live preview"
   homepage "https://github.com/ziwangprincex/Clavis"
 
+  depends_on arch: :arm64
+  depends_on macos: ">= :big_sur"
+
+  auto_updates true
+
   app "Clavis.app"
+
+  zap trash: [
+    "~/Library/Application Support/clavis",
+    "~/Library/Caches/com.clavis.app",
+    "~/Library/Preferences/com.clavis.app.plist",
+    "~/Library/Saved Application State/com.clavis.app.savedState",
+  ]
 end
