@@ -1,6 +1,6 @@
 cask "clavis" do
-  version "1.0.1"
-  sha256 "ca9fc3726c3f9b55993288165def4909c797df2b9db1e9782da85bc3076e0e1b"
+  version "1.0.2"
+  sha256 "27eac0a4ba5c9db9f857e9e36078c94504d6ccf3697be1d03ab52f98b4031e08"
 
   url "https://github.com/ziwangprincex/Clavis/releases/download/v#{version}/Clavis_#{version}_aarch64.dmg"
   name "Clavis"
@@ -13,6 +13,13 @@ cask "clavis" do
   auto_updates true
 
   app "Clavis.app"
+
+  caveats <<~EOS
+    Clavis is ad-hoc signed but NOT notarized by Apple, so macOS may
+    report it as "damaged". Clear the quarantine flag once:
+
+      xattr -cr /Applications/Clavis.app
+  EOS
 
   zap trash: [
     "~/Library/Application Support/clavis",
