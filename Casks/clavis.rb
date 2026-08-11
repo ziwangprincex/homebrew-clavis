@@ -1,6 +1,6 @@
 cask "clavis" do
-  version "1.0.8"
-  sha256 "42e2a51f0e58c3dd402baa906cda6c33e9145a5d91c3a2d91f1ea3b37151e99f"
+  version "1.0.9"
+  sha256 "93e3b1418293f7796e664a968f0302b1ad19ef1d6333d8f450b693184cd1463b"
 
   url "https://github.com/ziwangprincex/Clavis/releases/download/v#{version}/Clavis_#{version}_aarch64.dmg"
   name "Clavis"
