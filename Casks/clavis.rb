@@ -7,19 +7,11 @@ cask "clavis" do
   desc "Markdown / LaTeX / Typst editor with live preview"
   homepage "https://github.com/ziwangprincex/Clavis"
 
-  depends_on arch: :arm64
-  depends_on macos: ">= 11.0"
-
   auto_updates true
+  depends_on arch: :arm64
+  depends_on :macos
 
   app "Clavis.app"
-
-  caveats <<~EOS
-    Clavis is ad-hoc signed but NOT notarized by Apple, so macOS may
-    report it as "damaged". Clear the quarantine flag once:
-
-      xattr -cr /Applications/Clavis.app
-  EOS
 
   zap trash: [
     "~/Library/Application Support/clavis",
@@ -27,4 +19,11 @@ cask "clavis" do
     "~/Library/Preferences/com.clavis.app.plist",
     "~/Library/Saved Application State/com.clavis.app.savedState",
   ]
+
+  caveats <<~EOS
+    Clavis is ad-hoc signed but NOT notarized by Apple, so macOS may
+    report it as "damaged". Clear the quarantine flag once:
+
+      xattr -cr /Applications/Clavis.app
+  EOS
 end
