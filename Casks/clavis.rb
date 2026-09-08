@@ -1,6 +1,6 @@
 cask "clavis" do
-  version "1.1.1"
-  sha256 "fc795c77c3919a1d6c5ea768de5c05bffa1a5baa5f6ff580109e73b43d89528c"
+  version "1.2.0"
+  sha256 "21cf7dace528824658309059d61d59b63ea1b964c484c25a0f67204f2466f4b9"
 
   url "https://github.com/ziwangprincex/Clavis/releases/download/v#{version}/Clavis_#{version}_aarch64.dmg"
   name "Clavis"
@@ -8,7 +8,7 @@ cask "clavis" do
   homepage "https://github.com/ziwangprincex/Clavis"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= 11.0"
 
   auto_updates true
 
