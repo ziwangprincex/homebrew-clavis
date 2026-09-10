@@ -8,7 +8,7 @@ cask "clavis" do
   homepage "https://github.com/ziwangprincex/Clavis"
 
   depends_on arch: :arm64
-  depends_on macos: ">= 11.0"
+  depends_on macos: :big_sur
 
   auto_updates true
 
